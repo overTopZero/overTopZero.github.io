@@ -16,7 +16,7 @@
 <meta property="og:description" content="JavaScript 基础02书写位置基本代码: 分号不能省略 123&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;		&amp;lt;/script&amp;gt; 位置:  内嵌式: 可以放在任意位置, 因为html的编译顺序, 最好放在下面位置:  1234&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt">
 <meta property="og:image" content="http://oq0zg621g.bkt.clouddn.com/jsword01.png">
 <meta property="og:image" content="http://oq0zg621g.bkt.clouddn.com/jsword02.png">
-<meta property="og:updated_time" content="2017-05-16T09:42:28.000Z">
+<meta property="og:updated_time" content="2017-05-16T09:54:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js第二天">
 <meta name="twitter:description" content="JavaScript 基础02书写位置基本代码: 分号不能省略 123&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;		&amp;lt;/script&amp;gt; 位置:  内嵌式: 可以放在任意位置, 因为html的编译顺序, 最好放在下面位置:  1234&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt">
@@ -216,32 +216,33 @@
 </ul>
 <h4 id="3-判断数据类型"><a href="#3-判断数据类型" class="headerlink" title="3. 判断数据类型"></a>3. 判断数据类型</h4><pre><code>typeof()
 </code></pre><h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><ul>
-<li>比较运算符 <pre><code>* &lt;  &gt;   &lt;=  &gt;=   ==  !=
+<li>比较运算符<br><pre><code>&lt;  &gt;   &lt;=  &gt;=   ==  !=
 </code></pre></li>
-<li>算术运算符<ul>
-<li><ul>
-<li>加号<ul>
+<li><p>算术运算符</p>
+<ul>
+<li>“+” 加号<ul>
 <li>两个数字类型的变量相加，得到的是一个数字类型。</li>
 <li>一个数字类型和一个字符串相加，得到的是一个字符串。</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>— 减号<ul>
+<li>“—“ 减号<ul>
 <li>两个数字类型的变量相减，得到的是一个数字类型。</li>
 <li>一个数字类型和一个数字字符串相减，得到的是一个数字类型。</li>
 <li>一个数字类型和一个非数字字符串相减，得到的是NaN(not a number),是一个数字类型。</li>
 </ul>
 </li>
-<li>/ 除号<ul>
-<li>两个数字类型的变量相除，得到的是一个数字类型。</li>
+<li><p>“/“ 除号</p>
+<ul>
+<li>两个数字类型的变量相除，得到的是一个数字类型。<ul>
+<li>一个数字类型和一个数字字符串相除，得到的是一个数字类型。</li>
 </ul>
 </li>
-<li>一个数字类型和一个数字字符串相除，得到的是一个数字类型。<ul>
-<li>一个数字类型和一个非数字字符串相除，得到的是NaN,是一个数字类型。<br>★0做为除数的时候，得到结果    Infinity （无限大），是一个数字类型。</li>
+<li>一个数字类型和一个非数字字符串相除，得到的是NaN,是一个数字类型。    </li>
+<li>0做为除数的时候，得到结果    Infinity （无限大），是一个数字类型。</li>
 </ul>
 </li>
-<li>%  取余数<ul>
+<li><p>“%”  取余数</p>
+<ul>
 <li>优先级  有()先计算()里边的</li>
 </ul>
 </li>
