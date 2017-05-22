@@ -15,17 +15,16 @@
 
 
 
-<meta name="description" content="Javascript 历史 特点等基础知识">
-<meta name="keywords" content="Javascript">
+<meta name="description" content="三种冒泡排序的方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js第一天">
-<meta property="og:url" content="http://zhulele90.cn/2017/05/15/js第一天/index.html">
+<meta property="og:title" content="冒泡排序">
+<meta property="og:url" content="http://zhulele90.cn/2017/05/22/冒泡排序/index.html">
 <meta property="og:site_name" content="Craco的博客">
-<meta property="og:description" content="Javascript 历史 特点等基础知识">
-<meta property="og:updated_time" content="2017-05-17T02:26:50.000Z">
+<meta property="og:description" content="三种冒泡排序的方法">
+<meta property="og:updated_time" content="2017-05-22T02:43:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js第一天">
-<meta name="twitter:description" content="Javascript 历史 特点等基础知识">
+<meta name="twitter:title" content="冒泡排序">
+<meta name="twitter:description" content="三种冒泡排序的方法">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>js第一天 | Craco的博客</title>
+<title>冒泡排序 | Craco的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -261,11 +260,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-js第一天" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-冒泡排序" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/05/15/js第一天/" class="article-date">
-      <time datetime="2017-05-15T14:54:13.000Z" itemprop="datePublished">2017-05-15 22:54:13</time>
+      <a href="/2017/05/22/冒泡排序/" class="article-date">
+      <time datetime="2017-05-22T02:35:32.000Z" itemprop="datePublished">2017-05-22 10:35:32</time>
 </a>
 
 
@@ -280,7 +279,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js第一天
+      冒泡排序
     </h1>
   
 
@@ -290,10 +289,6 @@
         
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -301,44 +296,23 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Javascript 历史 特点等基础知识</p>
+        <p>三种冒泡排序的方法</p>
 <a id="more"></a>
-<h1 id="JavaScript基础-Day1"><a href="#JavaScript基础-Day1" class="headerlink" title="JavaScript基础(Day1)"></a>JavaScript基础(Day1)</h1><h3 id="JavaScript历史"><a href="#JavaScript历史" class="headerlink" title="JavaScript历史"></a>JavaScript历史</h3><p>34岁的系统程序员Brendan Eich（布兰登·艾奇）, 1995年4月, 网景公司录用了他, 1995年5月他只用10天时间就把Javascript设计出来.</p>
-<ul>
-<li>1995.2月 Netscape公司发布LiveScript，后临时改为JavaScript，为了赶上Java的热浪</li>
-<li>1997 年，以JavaScript 1.1 为基础。由来自 Netscape、Sun、微软、Borland 和其他一些对脚本编程感兴趣的公司的程序员组成的 TC39（ECMA的小组） 锤炼出了 ECMA-262，也就是ECMAScript1.0。</li>
-<li>1998年6月，ECMAScript 2.0版发布。</li>
-<li>1999年12月，ECMAScript 3.0版发布，成为JavaScript的通行标准，得到了广泛支持.</li>
-<li>2007年10月，ECMAScript 4.0版草案发布：分歧太大，失败告终。</li>
-<li>2009年12月，ECMAScript 5.0版正式发布.</li>
-<li>2015年6月17日，ECMAScript 6发布正式版本，即ECMAScript 2015。</li>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><h3 id="简单版"><a href="#简单版" class="headerlink" title="简单版"></a>简单版</h3><ul>
+<li>需求：冒泡排序。</li>
+<li>理论：1.比较轮数n-1。  2.比较次数n-1。  3.符合某个条件交换位置。</li>
+<li>核心：双重for循环。</li>
+<li>步骤：<br>  1.双重for循环。<br>  2.指定轮数和次数<br>  3.判断是否符合标准。如果符合标准交换位置。</li>
 </ul>
-<h3 id="认识JavaScript"><a href="#认识JavaScript" class="headerlink" title="认识JavaScript"></a>认识JavaScript</h3><p>JavaScript是一种网页编程技术, 就是一种基于对象和事件驱动，并具有安全性能的脚本语言,可以被嵌入到HTML文件中，不需要经过Web服务器就可以对用户操作作出响应.</p>
-<h4 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h4><ul>
-<li>ECMAScript：JavaScript的语法标准。</li>
-<li>DOM：JavaScript操作网页上的元素的API</li>
-<li>BOM：JavaScript操作浏览器的部分功能的API</li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">	<span class="keyword">var</span> arr = [<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="comment">//1.双重for循环。(外循环控制轮数)</span></div><div class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length<span class="number">-1</span>;i++)&#123;</div><div class="line">       <span class="comment">//2.指定轮数和次数（内循环控制次数）</span></div><div class="line">       <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;arr.length<span class="number">-1</span>;j++)&#123;</div><div class="line">           <span class="comment">//3.判断是否符合标准。如果符合标准交换位置。</span></div><div class="line">               <span class="comment">//从小到大排列顺滑，如果前面的比后面的大，那么交换位置。</span></div><div class="line">           <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</div><div class="line">               <span class="keyword">var</span> temp = arr[j];</div><div class="line">               arr[j] = arr[j+<span class="number">1</span>];</div><div class="line">               arr[j+<span class="number">1</span>] = temp;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="built_in">console</span>.log(arr);</div></pre></td></tr></table></figure>
+<h3 id="进阶版"><a href="#进阶版" class="headerlink" title="进阶版"></a>进阶版</h3><ul>
+<li>每轮比较少比较一次。（每一轮都会比较出一个最大值，然后后一轮没有必要再比较了，所以没比较一轮，就少比较一次。。。）</li>
 </ul>
-<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
-<li><p>简单易用</p>
-<ul>
-<li>可以使用任何文本编辑工具编写</li>
-<li>只需要浏览器就可以执行程序</li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> m = <span class="number">0</span>;</div><div class="line">  <span class="keyword">var</span> n = <span class="number">0</span>;</div><div class="line">  <span class="comment">//1.双重for循环。(外循环控制轮数)</span></div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length<span class="number">-1</span>;i++)&#123;</div><div class="line">      <span class="comment">//2.指定轮数和次数（内循环控制次数）</span></div><div class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;arr.length<span class="number">-1</span>-i;j++)&#123;</div><div class="line">          <span class="comment">//3.判断是否符合标准。如果符合标准交换位置。</span></div><div class="line">              <span class="comment">//从小到大排列顺滑，如果前面的比后面的大，那么交换位置。</span></div><div class="line">          <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</div><div class="line">              <span class="keyword">var</span> temp = arr[j];</div><div class="line">              arr[j] = arr[j+<span class="number">1</span>];</div><div class="line">              arr[j+<span class="number">1</span>] = temp;</div><div class="line">          &#125;</div><div class="line">          m++;</div><div class="line">      &#125;</div><div class="line">      n++;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">console</span>.log(arr);</div><div class="line">  <span class="built_in">console</span>.log(m);</div><div class="line">  <span class="built_in">console</span>.log(n);</div></pre></td></tr></table></figure>
+<h3 id="高级版"><a href="#高级版" class="headerlink" title="高级版"></a>高级版</h3><ul>
+<li>如果比较完备提前结束比较。（判断，如果本次比较没有移动任何元素，那么说明已经比较完成）</li>
 </ul>
-</li>
-<li><p>解释执行（解释语言）</p>
-<ul>
-<li>事先不编译</li>
-<li>逐行执行</li>
-<li>无需进行严格的变量声明</li>
-</ul>
-</li>
-<li>基于对象<ul>
-<li>内置大量现成对象，编写少量程序可以完成目标</li>
-</ul>
-</li>
-</ul>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> m = <span class="number">0</span>;</div><div class="line">  <span class="keyword">var</span> n = <span class="number">0</span>;</div><div class="line">  <span class="comment">//1.双重for循环。(外循环控制轮数)</span></div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length<span class="number">-1</span>;i++)&#123;</div><div class="line">      <span class="comment">//开闭原则。（写在第一个for循环里，是为了，每轮比较初始化bool变量变为true。）</span></div><div class="line">      <span class="keyword">var</span> bool = <span class="literal">true</span>;</div><div class="line">      <span class="comment">//2.指定轮数和次数（内循环控制次数）</span></div><div class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;arr.length<span class="number">-1</span>-i;j++)&#123;</div><div class="line">          <span class="comment">//3.判断是否符合标准。如果符合标准交换位置。</span></div><div class="line">              <span class="comment">//从小到大排列顺滑，如果前面的比后面的大，那么交换位置。</span></div><div class="line">          <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</div><div class="line">              <span class="keyword">var</span> temp = arr[j];</div><div class="line">              arr[j] = arr[j+<span class="number">1</span>];</div><div class="line">              arr[j+<span class="number">1</span>] = temp;</div><div class="line">              bool = <span class="literal">false</span>;</div><div class="line">          &#125;</div><div class="line">          m++;</div><div class="line">      &#125;</div><div class="line">      n++;</div><div class="line">      <span class="comment">//bool这个变量默认值为true;如果本轮比较有一对元素相互交换位置，那么也不能跳出循环。</span></div><div class="line">      <span class="comment">//但是，如果本轮比较没有任何元素相互交换位置，那么说明已经比较完成，可以跳出循环。</span></div><div class="line">      <span class="keyword">if</span>(bool)&#123;</div><div class="line">          <span class="keyword">break</span>;</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">console</span>.log(arr);</div><div class="line">  <span class="built_in">console</span>.log(m);</div><div class="line">  <span class="built_in">console</span>.log(n);</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -346,13 +320,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/05/15/js第一天/">js第一天</a></p>
+        <p><span>本文标题:</span><a href="/2017/05/22/冒泡排序/">冒泡排序</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Craco</a></p>
-        <p><span>发布时间:</span>2017-05-15, 22:54:13</p>
-        <p><span>最后更新:</span>2017-05-17, 10:26:50</p>
+        <p><span>发布时间:</span>2017-05-22, 10:35:32</p>
+        <p><span>最后更新:</span>2017-05-22, 10:43:20</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/05/15/js第一天/" title="js第一天">http://zhulele90.cn/2017/05/15/js第一天/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhulele90.cn/2017/05/15/js第一天/　　作者: Craco" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/05/22/冒泡排序/" title="冒泡排序">http://zhulele90.cn/2017/05/22/冒泡排序/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhulele90.cn/2017/05/22/冒泡排序/　　作者: Craco" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -364,12 +338,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
+        
+            <div id="article-nav-older" class="article-nav-title">
                 <a href="/2017/05/16/js第二天/">
                     js第二天
                 </a>
             </div>
-        
         
     </nav>
 
@@ -379,7 +353,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript基础-Day1"><span class="toc-number">1.</span> <span class="toc-text">JavaScript基础(Day1)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript历史"><span class="toc-number">1.0.1.</span> <span class="toc-text">JavaScript历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#认识JavaScript"><span class="toc-number">1.0.2.</span> <span class="toc-text">认识JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#组成"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">组成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#特点"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">特点</span></a></li></ol></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#冒泡排序"><span class="toc-number">1.</span> <span class="toc-text">冒泡排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单版"><span class="toc-number">1.1.</span> <span class="toc-text">简单版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶版"><span class="toc-number">1.2.</span> <span class="toc-text">进阶版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高级版"><span class="toc-number">1.3.</span> <span class="toc-text">高级版</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -415,7 +389,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"js第一天　| Craco的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"冒泡排序　| Craco的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -435,15 +409,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/05/16/js第二天/" title="上一篇: js第二天">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/05/16/js第二天/" title="下一篇: js第二天">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
