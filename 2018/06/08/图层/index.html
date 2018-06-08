@@ -15,22 +15,23 @@
 
 
 
-<meta name="description" content="图层的树状结构 巨妖有图层，洋葱也有图层，你懂吗？我们都有图层 – 史莱克  Core Animation其实是一个令人误解的命名。你可能认为它只是用来做动画的，但实际上它是从一个叫做Layer Kit这么一个不怎么和动画有关的名字演变而来，所以做动画这只是Core Animation特性的冰山一角。 Core Animation是一个复合引擎，它的职责就是尽可能快地组合屏幕上不同的可视内容，这个">
+<meta name="description" content="iOS图层">
+<meta name="keywords" content="iOS、图层">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Craco的博客">
-<meta property="og:url" content="http://zhulele90.cn/2018/06/05/1-图层树/图层树/index.html">
+<meta property="og:title" content="图层">
+<meta property="og:url" content="http://zhulele90.cn/2018/06/08/图层/index.html">
 <meta property="og:site_name" content="Craco的博客">
-<meta property="og:description" content="图层的树状结构 巨妖有图层，洋葱也有图层，你懂吗？我们都有图层 – 史莱克  Core Animation其实是一个令人误解的命名。你可能认为它只是用来做动画的，但实际上它是从一个叫做Layer Kit这么一个不怎么和动画有关的名字演变而来，所以做动画这只是Core Animation特性的冰山一角。 Core Animation是一个复合引擎，它的职责就是尽可能快地组合屏幕上不同的可视内容，这个">
-<meta property="og:image" content="http://zhulele90.cn/2018/06/05/1-图层树/图层树/1.1.jpeg">
-<meta property="og:image" content="http://zhulele90.cn/2018/06/05/1-图层树/图层树/1.2.jpeg">
-<meta property="og:image" content="http://zhulele90.cn/2018/06/05/1-图层树/图层树/1.3.jpeg">
-<meta property="og:image" content="http://zhulele90.cn/2018/06/05/1-图层树/图层树/1.4.jpeg">
-<meta property="og:image" content="http://zhulele90.cn/2018/06/05/1-图层树/图层树/1.5.jpeg">
-<meta property="og:updated_time" content="2018-06-04T19:07:42.000Z">
+<meta property="og:description" content="iOS图层">
+<meta property="og:image" content="http://zhulele90.cn/2018/06/08/图层/1.1.jpeg">
+<meta property="og:image" content="http://zhulele90.cn/2018/06/08/图层/1.2.jpeg">
+<meta property="og:image" content="http://zhulele90.cn/2018/06/08/图层/1.3.jpeg">
+<meta property="og:image" content="http://zhulele90.cn/2018/06/08/图层/1.4.jpeg">
+<meta property="og:image" content="http://zhulele90.cn/2018/06/08/图层/1.5.jpeg">
+<meta property="og:updated_time" content="2018-06-08T08:37:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Craco的博客">
-<meta name="twitter:description" content="图层的树状结构 巨妖有图层，洋葱也有图层，你懂吗？我们都有图层 – 史莱克  Core Animation其实是一个令人误解的命名。你可能认为它只是用来做动画的，但实际上它是从一个叫做Layer Kit这么一个不怎么和动画有关的名字演变而来，所以做动画这只是Core Animation特性的冰山一角。 Core Animation是一个复合引擎，它的职责就是尽可能快地组合屏幕上不同的可视内容，这个">
-<meta name="twitter:image" content="http://zhulele90.cn/2018/06/05/1-图层树/图层树/1.1.jpeg">
+<meta name="twitter:title" content="图层">
+<meta name="twitter:description" content="iOS图层">
+<meta name="twitter:image" content="http://zhulele90.cn/2018/06/08/图层/1.1.jpeg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -62,7 +63,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Craco的博客</title>
+<title>图层 | Craco的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -144,13 +145,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>菜單</li>
+                        <li>標籤</li>
                         
-                        <li>友情链接</li>
+                        <li>友情鏈接</li>
                         
                         
-                        <li>关于我</li>
+                        <li>關於我</li>
                         
                     </ul>
                 </div>
@@ -189,7 +190,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/1/">1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/冒泡/">冒泡</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/1/">1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS、图层/">iOS、图层</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/冒泡/">冒泡</a></li></ul>
                     </div>
                 </section>
                 
@@ -264,13 +265,13 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-1-图层树/图层树" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-图层" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/06/05/1-图层树/图层树/" class="article-date">
-      <time datetime="2018-06-04T19:07:42.000Z" itemprop="datePublished">2018-06-05 03:07:42</time>
+      <a href="/2018/06/08/图层/" class="article-date">
+      <time datetime="2018-06-08T08:32:08.000Z" itemprop="datePublished">2018-06-08 16:32:08</time>
 </a>
 
 
@@ -281,23 +282,47 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      图层
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS、图层/">iOS、图层</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="图层的树状结构"><a href="#图层的树状结构" class="headerlink" title="图层的树状结构"></a>图层的树状结构</h1><blockquote>
+        <p>iOS图层</p>
+<a id="more"></a>
+<h1 id="图层的树状结构"><a href="#图层的树状结构" class="headerlink" title="图层的树状结构"></a>图层的树状结构</h1><blockquote>
 <p>巨妖有图层，洋葱也有图层，你懂吗？我们都有图层 – 史莱克</p>
 </blockquote>
 <p>Core Animation其实是一个令人误解的命名。你可能认为它只是用来做动画的，但实际上它是从一个叫做<em>Layer Kit</em>这么一个不怎么和动画有关的名字演变而来，所以做动画这只是Core Animation特性的冰山一角。</p>
 <p>Core Animation是一个<em>复合引擎</em>，它的职责就是尽可能快地组合屏幕上不同的可视内容，这个内容是被分解成独立的<em>图层</em>，存储在一个叫做<em>图层树</em>的体系之中。于是这个树形成了<strong>UIKit</strong>以及在iOS应用程序当中你所能在屏幕上看见的一切的基础。</p>
 <p>在我们讨论动画之前，我们将从图层树开始，涉及一下Core Animation的<em>静态</em>组合以及布局特性。</p>
 <h2 id="图层和视图"><a href="#图层和视图" class="headerlink" title="图层和视图"></a>图层和视图</h2><p>如果你曾经在iOS或者Mac OS平台上写过应用程序，你可能会对<em>视图</em>的概念比较熟悉。一个视图就是在屏幕上显示的一个矩形块（比如图片，文字或者视频），它能够拦截类似于鼠标点击或者触摸手势等用户输入。视图在层级关系中可以互相嵌套，一个视图可以管理它的所有子视图的位置。图1.1显示了一种典型的视图层级关系</p>
-<p><img src="./1.1.jpeg" alt="图1.1" title="图1.1" width="700"></p>
+<p><img src="/2018/06/08/图层/1.1.jpeg" alt="图1.1" title="图1.1" width="700"></p>
 <p>图1.1 一种典型的iOS屏幕（左边）和形成视图的层级关系（右边）</p>
 <p>在iOS当中，所有的视图都从一个叫做<code>UIVIew</code>的基类派生而来，<code>UIView</code>可以处理触摸事件，可以支持基于<em>Core Graphics</em>绘图，可以做仿射变换（例如旋转或者缩放），或者简单的类似于滑动或者渐变的动画。</p>
 <h3 id="CALayer"><a href="#CALayer" class="headerlink" title="CALayer"></a>CALayer</h3><p><code>CALayer</code>类在概念上和<code>UIView</code>类似，同样也是一些被层级关系树管理的矩形块，同样也可以包含一些内容（像图片，文本或者背景色），管理子图层的位置。它们有一些方法和属性用来做动画和变换。和<code>UIView</code>最大的不同是<code>CALayer</code>不处理用户的交互。</p>
 <p><code>CALayer</code>并不清楚具体的<em>响应链</em>（iOS通过视图层级关系用来传送触摸事件的机制），于是它并不能够响应事件，即使它提供了一些方法来判断是否一个触点在图层的范围之内（具体见第三章，“图层的几何学”）</p>
 <h3 id="平行的层级关系"><a href="#平行的层级关系" class="headerlink" title="平行的层级关系"></a>平行的层级关系</h3><p>每一个<code>UIview</code>都有一个<code>CALayer</code>实例的图层属性，也就是所谓的<em>backing layer</em>，视图的职责就是创建并管理这个图层，以确保当子视图在层级关系中添加或者被移除的时候，他们关联的图层也同样对应在层级关系树当中有相同的操作（见图1.2）。</p>
-<p><img src="./1.2.jpeg" alt="图1.2" title="图1.2" width="700"></p>
+<p><img src="/2018/06/08/图层/1.2.jpeg" alt="图1.2" title="图1.2" width="700"></p>
 <p>图1.2 图层的树状结构（左边）以及对应的视图层级（右边）</p>
 <p>实际上这些背后关联的图层才是真正用来在屏幕上显示和做动画，<code>UIView</code>仅仅是对它的一个封装，提供了一些iOS类似于处理触摸的具体功能，以及Core Animation底层方法的高级接口。</p>
 <p>但是为什么iOS要基于<code>UIView</code>和<code>CALayer</code>提供两个平行的层级关系呢？为什么不用一个简单的层级来处理所有事情呢？原因在于要做职责分离，这样也能避免很多重复代码。在iOS和Mac OS两个平台上，事件和用户交互有很多地方的不同，基于多点触控的用户界面和基于鼠标键盘有着本质的区别，这就是为什么iOS有UIKit和<code>UIView</code>，但是Mac OS有AppKit和<code>NSView</code>的原因。他们功能上很相似，但是在实现上有着显著的区别。</p>
@@ -318,12 +343,12 @@
 <h2 id="使用图层"><a href="#使用图层" class="headerlink" title="使用图层"></a>使用图层</h2><p>首先我们来创建一个简单的项目，来操纵一些<code>layer</code>的属性。打开Xcode，使用<em>Single View Application</em>模板创建一个工程。</p>
 <p>在屏幕中央创建一个小视图（大约200 X 200的尺寸），当然你可以手工编码，或者使用Interface Builder（随你方便）。确保你的视图控制器要添加一个视图的属性以便可以直接访问它。我们把它称作<code>layerView</code>。</p>
 <p>运行项目，应该能在浅灰色屏幕背景中看见一个白色方块（图1.3），如果没看见，可能需要调整一下背景window或者view的颜色</p>
-<p><img src="./1.3.jpeg" alt="图1.3" title="图1.3" width="700"></p>
+<p><img src="/2018/06/08/图层/1.3.jpeg" alt="图1.3" title="图1.3" width="700"></p>
 <p>图1.3 灰色背景上的一个白色<code>UIView</code></p>
 <p>这并没有什么令人激动的地方，我们来添加一个色块，在白色方块中间添加一个小的蓝色块。</p>
 <p>我们当然可以简单地在已经存在的<code>UIView</code>上添加一个子视图（随意用代码或者IB），但这不能真正学到任何关于图层的东西。</p>
 <p>于是我们来创建一个<code>CALayer</code>，并且把它作为我们视图相关图层的子图层。尽管<code>UIView</code>类的接口中暴露了图层属性，但是标准的Xcode项目模板并没有包含Core Animation相关头文件。所以如果我们不给项目添加合适的库，是不能够使用任何图层相关的方法或者访问它的属性。所以首先需要添加QuartzCore框架到Build Phases标签（图1.4），然后在vc的.m文件中引入<quartzcore quartzcore.h="">库。</quartzcore></p>
-<p><img src="./1.4.jpeg" alt="图1.4" title="图1.4" width="700"></p>
+<p><img src="/2018/06/08/图层/1.4.jpeg" alt="图1.4" title="图1.4" width="700"></p>
 <p>图1.4 把QuartzCore库添加到项目</p>
 <p>之后就可以在代码中直接引用<code>CALayer</code>的属性和方法。在清单1.1中，我们用创建了一个<code>CALayer</code>，设置了它的<code>backgroundColor</code>属性，然后添加到<code>layerView</code>背后相关图层的子图层（这段代码的前提是通过IB创建了<code>layerView</code>并做好了连接），图1.5显示了结果。</p>
 <p>清单1.1 给视图添加一个蓝色子图层</p>
@@ -349,7 +374,7 @@
 }
 @end
 </code></pre>
-<p><img src="./1.5.jpeg" alt="图1.5" title="图1.5" width="700"></p>
+<p><img src="/2018/06/08/图层/1.5.jpeg" alt="图1.5" title="图1.5" width="700"></p>
 <p>图1.5 白色<code>UIView</code>内部嵌套的蓝色<code>CALayer</code></p>
 <p>一个视图只有一个相关联的图层（自动创建），同时它也可以支持添加无数多个子图层，从清单1.1可以看出，你可以显示创建一个单独的图层，并且把它直接添加到视图关联图层的子图层。尽管可以这样添加图层，但往往我们只是见简单地处理视图，他们关联的图层并不需要额外地手动添加子图层。</p>
 <p>在Mac OS平台，10.8版本之前，一个显著的性能缺陷就是由于用了视图层级而不是单独在一个视图内使用<code>CALayer</code>树状层级。但是在iOS平台，使用轻量级的<code>UIView</code>类并没有显著的性能影响（当然在Mac OS 10.8之后，<code>NSView</code>的性能同样也得到很大程度的提高）。</p>
@@ -371,17 +396,17 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/06/05/1-图层树/图层树/"></a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Craco</a></p>
-        <p><span>发布时间:</span>2018-06-05, 03:07:42</p>
-        <p><span>最后更新:</span>2018-06-05, 03:07:42</p>
+        <p><span>本文標題:</span><a href="/2018/06/08/图层/">图层</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">Craco</a></p>
+        <p><span>發布時間:</span>2018-06-08, 16:32:08</p>
+        <p><span>最後更新:</span>2018-06-08, 16:37:01</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/06/05/1-图层树/图层树/" title="">http://zhulele90.cn/2018/06/05/1-图层树/图层树/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhulele90.cn/2018/06/05/1-图层树/图层树/　　作者: Craco" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始鏈接:</span><a class="post-url" href="/2018/06/08/图层/" title="图层">http://zhulele90.cn/2018/06/08/图层/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhulele90.cn/2018/06/08/图层/　　作者: Craco" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
         </p>
     </div>
 
@@ -408,7 +433,7 @@
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
+        <strong class="toc-title">文章目錄</strong>
         
             <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#图层的树状结构"><span class="toc-number">1.</span> <span class="toc-text">图层的树状结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#图层和视图"><span class="toc-number">1.1.</span> <span class="toc-text">图层和视图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CALayer"><span class="toc-number">1.1.1.</span> <span class="toc-text">CALayer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#平行的层级关系"><span class="toc-number">1.1.2.</span> <span class="toc-text">平行的层级关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用图层"><span class="toc-number">1.2.</span> <span class="toc-text">使用图层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
         
@@ -424,10 +449,10 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
 
     <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
     </script>
 
 
@@ -446,7 +471,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| Craco的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"图层　| Craco的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -480,7 +505,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06/22/iOS 行距调整 VS 设计师/">iOS 行距调整</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/05/1-图层树/图层树/">1-图层树/图层树</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/iOS-Image-Processing-in-iOS/">Image Processing in iOS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/DOM第一讲/">DOM第一讲</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/冒泡排序/">冒泡排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/16/js第二天/">js第二天</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/15/js第一天/">js第一天</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06/22/iOS 行距调整 VS 设计师/">iOS 行距调整</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/08/图层/">图层</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/iOS-Image-Processing-in-iOS/">Image Processing in iOS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/DOM第一讲/">DOM第一讲</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/冒泡排序/">冒泡排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/16/js第二天/">js第二天</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/15/js第一天/">js第一天</a></li></ul>
 
 
 
@@ -497,14 +522,14 @@
                 2016-2018 Craco
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、簡潔且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄博客主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -513,7 +538,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -546,9 +571,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
