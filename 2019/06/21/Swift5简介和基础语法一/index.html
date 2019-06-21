@@ -15,23 +15,16 @@
 
 
 
-<meta name="description" content="iOS图层">
-<meta name="keywords" content="iOS、图层">
+<meta name="description" content="Swift简介 Swift是Apple在2014年6月WWDC发布的全新编程语言，中文名和logo是“雨燕” Swift之父Chris Lattner  Clang编译器作者、LLVM项目的主要发起人 从Apple离职后，先后跳槽到Tesla、Google 目前在Google Brain从事AI研究">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图层">
-<meta property="og:url" content="http://zhulele90.cn/2018/06/08/图层/index.html">
+<meta property="og:title" content="Swift5简介和基础语法一">
+<meta property="og:url" content="http://zhulele90.cn/2019/06/21/Swift5简介和基础语法一/index.html">
 <meta property="og:site_name" content="Craco的博客">
-<meta property="og:description" content="iOS图层">
-<meta property="og:image" content="http://zhulele90.cn/2018/06/08/图层/1.1.jpeg">
-<meta property="og:image" content="http://zhulele90.cn/2018/06/08/图层/1.2.jpeg">
-<meta property="og:image" content="http://zhulele90.cn/2018/06/08/图层/1.3.jpeg">
-<meta property="og:image" content="http://zhulele90.cn/2018/06/08/图层/1.4.jpeg">
-<meta property="og:image" content="http://zhulele90.cn/2018/06/08/图层/1.5.jpeg">
-<meta property="og:updated_time" content="2018-06-08T08:37:01.000Z">
+<meta property="og:description" content="Swift简介 Swift是Apple在2014年6月WWDC发布的全新编程语言，中文名和logo是“雨燕” Swift之父Chris Lattner  Clang编译器作者、LLVM项目的主要发起人 从Apple离职后，先后跳槽到Tesla、Google 目前在Google Brain从事AI研究">
+<meta property="og:updated_time" content="2019-06-21T08:11:04.344Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图层">
-<meta name="twitter:description" content="iOS图层">
-<meta name="twitter:image" content="http://zhulele90.cn/2018/06/08/图层/1.1.jpeg">
+<meta name="twitter:title" content="Swift5简介和基础语法一">
+<meta name="twitter:description" content="Swift简介 Swift是Apple在2014年6月WWDC发布的全新编程语言，中文名和logo是“雨燕” Swift之父Chris Lattner  Clang编译器作者、LLVM项目的主要发起人 从Apple离职后，先后跳槽到Tesla、Google 目前在Google Brain从事AI研究">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -63,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>图层 | Craco的博客</title>
+<title>Swift5简介和基础语法一 | Craco的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -267,11 +260,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-图层" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Swift5简介和基础语法一" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/06/08/图层/" class="article-date">
-      <time datetime="2018-06-08T08:32:08.000Z" itemprop="datePublished">2018-06-08 16:32:08</time>
+      <a href="/2019/06/21/Swift5简介和基础语法一/" class="article-date">
+      <time datetime="2019-06-21T08:09:26.000Z" itemprop="datePublished">2019-06-21 16:09:26</time>
 </a>
 
 
@@ -286,7 +279,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      图层
+      Swift5简介和基础语法一
     </h1>
   
 
@@ -296,10 +289,6 @@
         
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS、图层/">iOS、图层</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -307,87 +296,83 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>iOS图层</p>
+        <h2 id="Swift简介"><a href="#Swift简介" class="headerlink" title="Swift简介"></a>Swift简介</h2><ul>
+<li>Swift是Apple在2014年6月WWDC发布的全新编程语言，中文名和logo是“雨燕”</li>
+<li>Swift之父Chris Lattner <ul>
+<li>Clang编译器作者、LLVM项目的主要发起人</li>
+<li>从Apple离职后，先后跳槽到Tesla、Google</li>
+<li>目前在Google Brain从事AI研究</li>
+</ul>
+</li>
+</ul>
 <a id="more"></a>
-<h1 id="图层的树状结构"><a href="#图层的树状结构" class="headerlink" title="图层的树状结构"></a>图层的树状结构</h1><blockquote>
-<p>巨妖有图层，洋葱也有图层，你懂吗？我们都有图层 – 史莱克</p>
-</blockquote>
-<p>Core Animation其实是一个令人误解的命名。你可能认为它只是用来做动画的，但实际上它是从一个叫做<em>Layer Kit</em>这么一个不怎么和动画有关的名字演变而来，所以做动画这只是Core Animation特性的冰山一角。</p>
-<p>Core Animation是一个<em>复合引擎</em>，它的职责就是尽可能快地组合屏幕上不同的可视内容，这个内容是被分解成独立的<em>图层</em>，存储在一个叫做<em>图层树</em>的体系之中。于是这个树形成了<strong>UIKit</strong>以及在iOS应用程序当中你所能在屏幕上看见的一切的基础。</p>
-<p>在我们讨论动画之前，我们将从图层树开始，涉及一下Core Animation的<em>静态</em>组合以及布局特性。</p>
-<h2 id="图层和视图"><a href="#图层和视图" class="headerlink" title="图层和视图"></a>图层和视图</h2><p>如果你曾经在iOS或者Mac OS平台上写过应用程序，你可能会对<em>视图</em>的概念比较熟悉。一个视图就是在屏幕上显示的一个矩形块（比如图片，文字或者视频），它能够拦截类似于鼠标点击或者触摸手势等用户输入。视图在层级关系中可以互相嵌套，一个视图可以管理它的所有子视图的位置。图1.1显示了一种典型的视图层级关系</p>
-<p><img src="/2018/06/08/图层/1.1.jpeg" alt="图1.1" title="图1.1" width="700"></p>
-<p>图1.1 一种典型的iOS屏幕（左边）和形成视图的层级关系（右边）</p>
-<p>在iOS当中，所有的视图都从一个叫做<code>UIVIew</code>的基类派生而来，<code>UIView</code>可以处理触摸事件，可以支持基于<em>Core Graphics</em>绘图，可以做仿射变换（例如旋转或者缩放），或者简单的类似于滑动或者渐变的动画。</p>
-<h3 id="CALayer"><a href="#CALayer" class="headerlink" title="CALayer"></a>CALayer</h3><p><code>CALayer</code>类在概念上和<code>UIView</code>类似，同样也是一些被层级关系树管理的矩形块，同样也可以包含一些内容（像图片，文本或者背景色），管理子图层的位置。它们有一些方法和属性用来做动画和变换。和<code>UIView</code>最大的不同是<code>CALayer</code>不处理用户的交互。</p>
-<p><code>CALayer</code>并不清楚具体的<em>响应链</em>（iOS通过视图层级关系用来传送触摸事件的机制），于是它并不能够响应事件，即使它提供了一些方法来判断是否一个触点在图层的范围之内（具体见第三章，“图层的几何学”）</p>
-<h3 id="平行的层级关系"><a href="#平行的层级关系" class="headerlink" title="平行的层级关系"></a>平行的层级关系</h3><p>每一个<code>UIview</code>都有一个<code>CALayer</code>实例的图层属性，也就是所谓的<em>backing layer</em>，视图的职责就是创建并管理这个图层，以确保当子视图在层级关系中添加或者被移除的时候，他们关联的图层也同样对应在层级关系树当中有相同的操作（见图1.2）。</p>
-<p><img src="/2018/06/08/图层/1.2.jpeg" alt="图1.2" title="图1.2" width="700"></p>
-<p>图1.2 图层的树状结构（左边）以及对应的视图层级（右边）</p>
-<p>实际上这些背后关联的图层才是真正用来在屏幕上显示和做动画，<code>UIView</code>仅仅是对它的一个封装，提供了一些iOS类似于处理触摸的具体功能，以及Core Animation底层方法的高级接口。</p>
-<p>但是为什么iOS要基于<code>UIView</code>和<code>CALayer</code>提供两个平行的层级关系呢？为什么不用一个简单的层级来处理所有事情呢？原因在于要做职责分离，这样也能避免很多重复代码。在iOS和Mac OS两个平台上，事件和用户交互有很多地方的不同，基于多点触控的用户界面和基于鼠标键盘有着本质的区别，这就是为什么iOS有UIKit和<code>UIView</code>，但是Mac OS有AppKit和<code>NSView</code>的原因。他们功能上很相似，但是在实现上有着显著的区别。</p>
-<p>绘图，布局和动画，相比之下就是类似Mac笔记本和桌面系列一样应用于iPhone和iPad触屏的概念。把这种功能的逻辑分开并应用到独立的Core Animation框架，苹果就能够在iOS和Mac OS之间共享代码，使得对苹果自己的OS开发团队和第三方开发者去开发两个平台的应用更加便捷。</p>
-<p>实际上，这里并不是两个层级关系，而是四个，每一个都扮演不同的角色，除了视图层级和图层树之外，还存在<em>呈现树</em>和<em>渲染树</em>，将在第七章“隐式动画”和第十二章“性能调优”分别讨论。</p>
-<p>##图层的能力<br>如果说<code>CALayer</code>是<code>UIView</code>内部实现细节，那我们为什么要全面地了解它呢？苹果当然为我们提供了优美简洁的<code>UIView</code>接口，那么我们是否就没必要直接去处理Core Animation的细节了呢？</p>
-<p>某种意义上说的确是这样，对一些简单的需求来说，我们确实没必要处理<code>CALayer</code>，因为苹果已经通过<code>UIView</code>的高级API间接地使得动画变得很简单。</p>
-<p>但是这种简单会不可避免地带来一些灵活上的缺陷。如果你略微想在底层做一些改变，或者使用一些苹果没有在<code>UIView</code>上实现的接口功能，这时除了介入Core Animation底层之外别无选择。</p>
-<p>我们已经证实了图层不能像视图那样处理触摸事件，那么他能做哪些视图不能做的呢？这里有一些<code>UIView</code>没有暴露出来的CALayer的功能：</p>
-<ul>
-<li>阴影，圆角，带颜色的边框</li>
-<li>3D变换</li>
-<li>非矩形范围</li>
-<li>透明遮罩</li>
-<li>多级非线性动画</li>
+<h2 id="Swift版本"><a href="#Swift版本" class="headerlink" title="Swift版本"></a>Swift版本</h2><ul>
+<li>Swift5.x版本，ABI稳定<ul>
+<li>API（Application Programming Interface): 应用程序编程接口<ul>
+<li>源代码和库之间的接口 </li>
 </ul>
-<p>我们将会在后续章节中探索这些功能，首先我们要关注一下在应用程序当中<code>CALayer</code>是怎样被利用起来的。</p>
-<h2 id="使用图层"><a href="#使用图层" class="headerlink" title="使用图层"></a>使用图层</h2><p>首先我们来创建一个简单的项目，来操纵一些<code>layer</code>的属性。打开Xcode，使用<em>Single View Application</em>模板创建一个工程。</p>
-<p>在屏幕中央创建一个小视图（大约200 X 200的尺寸），当然你可以手工编码，或者使用Interface Builder（随你方便）。确保你的视图控制器要添加一个视图的属性以便可以直接访问它。我们把它称作<code>layerView</code>。</p>
-<p>运行项目，应该能在浅灰色屏幕背景中看见一个白色方块（图1.3），如果没看见，可能需要调整一下背景window或者view的颜色</p>
-<p><img src="/2018/06/08/图层/1.3.jpeg" alt="图1.3" title="图1.3" width="700"></p>
-<p>图1.3 灰色背景上的一个白色<code>UIView</code></p>
-<p>这并没有什么令人激动的地方，我们来添加一个色块，在白色方块中间添加一个小的蓝色块。</p>
-<p>我们当然可以简单地在已经存在的<code>UIView</code>上添加一个子视图（随意用代码或者IB），但这不能真正学到任何关于图层的东西。</p>
-<p>于是我们来创建一个<code>CALayer</code>，并且把它作为我们视图相关图层的子图层。尽管<code>UIView</code>类的接口中暴露了图层属性，但是标准的Xcode项目模板并没有包含Core Animation相关头文件。所以如果我们不给项目添加合适的库，是不能够使用任何图层相关的方法或者访问它的属性。所以首先需要添加QuartzCore框架到Build Phases标签（图1.4），然后在vc的.m文件中引入<quartzcore quartzcore.h="">库。</quartzcore></p>
-<p><img src="/2018/06/08/图层/1.4.jpeg" alt="图1.4" title="图1.4" width="700"></p>
-<p>图1.4 把QuartzCore库添加到项目</p>
-<p>之后就可以在代码中直接引用<code>CALayer</code>的属性和方法。在清单1.1中，我们用创建了一个<code>CALayer</code>，设置了它的<code>backgroundColor</code>属性，然后添加到<code>layerView</code>背后相关图层的子图层（这段代码的前提是通过IB创建了<code>layerView</code>并做好了连接），图1.5显示了结果。</p>
-<p>清单1.1 给视图添加一个蓝色子图层</p>
-<pre><code class="objective-c">#import &quot;ViewController.h&quot;
-#import &lt;QuartzCore/QuartzCore.h&gt;
-@interface ViewController ()
-
-@property (nonatomic, weak) IBOutlet UIView *layerView;
-￼
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    //create sublayer
-    CALayer *blueLayer = [CALayer layer];
-    blueLayer.frame = CGRectMake(50.0f, 50.0f, 100.0f, 100.0f);
-    blueLayer.backgroundColor = [UIColor blueColor].CGColor;
-    //add it to our view
-    [self.layerView.layer addSublayer:blueLayer];
-}
-@end
-</code></pre>
-<p><img src="/2018/06/08/图层/1.5.jpeg" alt="图1.5" title="图1.5" width="700"></p>
-<p>图1.5 白色<code>UIView</code>内部嵌套的蓝色<code>CALayer</code></p>
-<p>一个视图只有一个相关联的图层（自动创建），同时它也可以支持添加无数多个子图层，从清单1.1可以看出，你可以显示创建一个单独的图层，并且把它直接添加到视图关联图层的子图层。尽管可以这样添加图层，但往往我们只是见简单地处理视图，他们关联的图层并不需要额外地手动添加子图层。</p>
-<p>在Mac OS平台，10.8版本之前，一个显著的性能缺陷就是由于用了视图层级而不是单独在一个视图内使用<code>CALayer</code>树状层级。但是在iOS平台，使用轻量级的<code>UIView</code>类并没有显著的性能影响（当然在Mac OS 10.8之后，<code>NSView</code>的性能同样也得到很大程度的提高）。</p>
-<p>使用图层关联的视图而不是<code>CALayer</code>的好处在于，你能在使用所有<code>CALayer</code>底层特性的同时，也可以使用<code>UIView</code>的高级API（比如自动排版，布局和事件处理）。</p>
-<p>然而，当满足以下条件的时候，你可能更需要使用<code>CALayer</code>而不是<code>UIView</code></p>
-<ul>
-<li>开发同时可以在Mac OS上运行的跨平台应用</li>
-<li>使用多种<code>CALayer</code>的子类（见第六章，“特殊的图层“），并且不想创建额外的<code>UIView</code>去包封装它们所有</li>
-<li>做一些对性能特别挑剔的工作，比如对<code>UIView</code>一些可忽略不计的操作都会引起显著的不同（尽管在这种情况下，你可能会想直接使用OpenGL来绘图）</li>
+</li>
+<li>ABI (Application Binary Interface)：应用程序二进制接口<ul>
+<li>应用程序与操作系统之间的底层接口</li>
+<li>涉及的内容有:目标文件格式、数据类型的大小、布局、对齐、函数调用约定等等 </li>
 </ul>
-<p>但是这些例子都很少见，总的来说，处理视图会比单独处理图层更加方便。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这一章阐述了图层的树状结构，说明了如何在iOS中由<code>UIView</code>的层级关系形成的一种平行的<code>CALayer</code>层级关系，在后面的实验中，我们创建了自己的<code>CALayer</code>，并把它添加到图层树中。</p>
-<p>在第二章，“图层关联的图片”，我们将要研究一下<code>CALayer</code>关联的图片，以及Core Animation提供的操作显示的一些特性。</p>
+</li>
+</ul>
+</li>
+<li>随着ABI的稳定，Swift语法基本不会再有太大的改动</li>
+<li>Swift完全开源: <a href="https://github.com/apple/swift" target="_blank" rel="external">htps://github.com/apple/swift</a>,主要采用C++编写</li>
+</ul>
+<h2 id="Swift编译流程"><a href="#Swift编译流程" class="headerlink" title="Swift编译流程"></a>Swift编译流程</h2><p>Swift Code –&gt; Swift AST –&gt; Raw Swift IL –&gt; Canonical Swift IL –&gt; LLVM IR –&gt; Assembly –&gt; Executable</p>
+<h3 id="swiftc"><a href="#swiftc" class="headerlink" title="swiftc"></a>swiftc</h3><ul>
+<li>swiftc存放在Xcode内部<ul>
+<li>Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin</li>
+</ul>
+</li>
+<li>一些操作<ul>
+<li>生成语法树：swiftc -dump-ast main.swift</li>
+<li>生成最简洁的SIL代码：swiftc -emit-sil main.swift</li>
+<li>生成LLVM IR代码： swiftc -emit-ir main.swift -o main.ll</li>
+<li>生成汇编代码： swiftc -emit-assembly main.swift -o main.s</li>
+</ul>
+</li>
+<li>对汇编代码进行分析，可以真正掌握编程语言的本质</li>
+</ul>
+<h2 id="Playground-View"><a href="#Playground-View" class="headerlink" title="Playground - View"></a>Playground - View</h2> <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> UIKit</div><div class="line"><span class="keyword">import</span> PlaygroundSupport</div><div class="line"></div><div class="line"><span class="keyword">let</span> view = <span class="type">UIView</span>()</div><div class="line">view.frame = <span class="type">CGRect</span>(x: <span class="number">0</span>, y: <span class="number">0</span>, width: <span class="number">100</span>, height: <span class="number">100</span>)</div><div class="line">view.backgroundColor = <span class="type">UIColor</span>.blue</div><div class="line"><span class="type">PlaygroundPage</span>.current.liveView = view</div></pre></td></tr></table></figure>
+<h2 id="Playground-注释"><a href="#Playground-注释" class="headerlink" title="Playground - 注释"></a>Playground - 注释</h2><ul>
+<li>单行注释 //</li>
+<li>多行注释 /<em> </em>/</li>
+<li>多行嵌套注释 /<em> 1 /</em> 3 <em>/ 2 </em>/</li>
+<li>支持markup语法 添加冒号 //: 等</li>
+</ul>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ul>
+<li>只能赋值一次</li>
+<li>它的值不要求在编译时期确定，但使用之前必须赋值一次</li>
+<li>变量、常量在初始化之前，都不能使用</li>
+</ul>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><ul>
+<li>标识符(比如常量名、变量名、函数名)几乎可以使用任何字符</li>
+<li>标识符不能以数字开头，不能包含空白字符、制表符、箭头灯特殊字符</li>
+</ul>
+<h2 id="常见数据类型"><a href="#常见数据类型" class="headerlink" title="常见数据类型"></a>常见数据类型</h2><ul>
+<li>值类型 (value type)<ul>
+<li>枚举(enum): Optional</li>
+<li>结构体(struct): Bool、Int、Float、Double、Character、String、Array、Dictionary、Set</li>
+</ul>
+</li>
+<li>引用类型 (reference type)<ul>
+<li>类(class)</li>
+</ul>
+</li>
+</ul>
+<h2 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h2><ul>
+<li>布尔类型 <code>let bool = true</code></li>
+<li>字符串 <code>let string = &quot;Hello word!&quot;</code></li>
+<li>字符（可储存ASCII字符、Unicode字符）<code>let character: Character = &quot;A&quot;</code></li>
+<li>浮点数 <code>let double = 12.0</code></li>
+<li>数组 <code>let array = [1, 3, 3, 4]</code></li>
+<li>字典 <code>let dictionary = [&quot;age&quot;: 19, &quot;height&quot;: 123]</code></li>
+</ul>
+<h2 id="元祖-tuple"><a href="#元祖-tuple" class="headerlink" title="元祖(tuple)"></a>元祖(tuple)</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> http404Error = (<span class="number">404</span>, <span class="string">"Not Found"</span>)</div><div class="line"><span class="built_in">print</span>(<span class="string">"The status code is <span class="subst">\(http404Error.<span class="number">0</span>)</span>"</span>)</div><div class="line"></div><div class="line"><span class="keyword">let</span> (statusCode, statusMessage) = http404Error</div><div class="line"><span class="built_in">print</span>(<span class="string">"The status code is <span class="subst">\(statusCode)</span>"</span>)</div><div class="line"></div><div class="line"><span class="keyword">let</span> (justTheStatusCode, <span class="number">_</span>) = http404Error</div><div class="line"></div><div class="line"><span class="keyword">let</span> http200Status = (statusCode: <span class="number">200</span>, description: <span class="string">"OK"</span>)</div><div class="line"><span class="built_in">print</span>(<span class="string">"The status code is <span class="subst">\(http200Status.description)</span>"</span>)</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -396,13 +381,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2018/06/08/图层/">图层</a></p>
+        <p><span>Title:</span><a href="/2019/06/21/Swift5简介和基础语法一/">Swift5简介和基础语法一</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Craco</a></p>
-        <p><span>Created:</span>2018-06-08, 16:32:08</p>
-        <p><span>Updated:</span>2018-06-08, 16:37:01</p>
+        <p><span>Created:</span>2019-06-21, 16:09:26</p>
+        <p><span>Updated:</span>2019-06-21, 16:11:04</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2018/06/08/图层/" title="图层">http://zhulele90.cn/2018/06/08/图层/</a>
-            <span class="copy-path" data-clipboard-text="From http://zhulele90.cn/2018/06/08/图层/　　By Craco" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2019/06/21/Swift5简介和基础语法一/" title="Swift5简介和基础语法一">http://zhulele90.cn/2019/06/21/Swift5简介和基础语法一/</a>
+            <span class="copy-path" data-clipboard-text="From http://zhulele90.cn/2019/06/21/Swift5简介和基础语法一/　　By Craco" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -414,16 +399,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/06/08/iOS行距调整/">
-                    iOS行距调整
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/06/06/iOS-Image-Processing-in-iOS/">
-                    Image Processing in iOS
+                <a href="/2018/06/08/iOS行距调整/">
+                    iOS行距调整
                 </a>
             </div>
         
@@ -435,7 +414,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#图层的树状结构"><span class="toc-number">1.</span> <span class="toc-text">图层的树状结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#图层和视图"><span class="toc-number">1.1.</span> <span class="toc-text">图层和视图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CALayer"><span class="toc-number">1.1.1.</span> <span class="toc-text">CALayer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#平行的层级关系"><span class="toc-number">1.1.2.</span> <span class="toc-text">平行的层级关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用图层"><span class="toc-number">1.2.</span> <span class="toc-text">使用图层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift简介"><span class="toc-number">1.</span> <span class="toc-text">Swift简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift版本"><span class="toc-number">2.</span> <span class="toc-text">Swift版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift编译流程"><span class="toc-number">3.</span> <span class="toc-text">Swift编译流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#swiftc"><span class="toc-number">3.1.</span> <span class="toc-text">swiftc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Playground-View"><span class="toc-number">4.</span> <span class="toc-text">Playground - View</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Playground-注释"><span class="toc-number">5.</span> <span class="toc-text">Playground - 注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常量"><span class="toc-number">6.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标识符"><span class="toc-number">7.</span> <span class="toc-text">标识符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见数据类型"><span class="toc-number">8.</span> <span class="toc-text">常见数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字面量"><span class="toc-number">9.</span> <span class="toc-text">字面量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元祖-tuple"><span class="toc-number">10.</span> <span class="toc-text">元祖(tuple)</span></a></li></ol>
         
     </div>
     <style>
@@ -471,7 +450,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"图层　| Craco的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Swift5简介和基础语法一　| Craco的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -491,15 +470,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/06/08/iOS行距调整/" title="Pre: iOS行距调整">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/06/06/iOS-Image-Processing-in-iOS/" title="Next: Image Processing in iOS">
+            <a href="/2018/06/08/iOS行距调整/" title="Next: iOS行距调整">
                 <i class="fa fa-angle-right"></i>
             </a>
         
