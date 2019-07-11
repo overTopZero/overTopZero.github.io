@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="三种冒泡排序的方法">
-<meta name="keywords" content="冒泡">
+<meta name="description" content="Swift简介 Swift是Apple在2014年6月WWDC发布的全新编程语言，中文名和logo是“雨燕” Swift之父Chris Lattner  Clang编译器作者、LLVM项目的主要发起人 从Apple离职后，先后跳槽到Tesla、Google 目前在Google Brain从事AI研究">
+<meta name="keywords" content="Swift5 iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="冒泡排序">
-<meta property="og:url" content="http://zhulele90.cn/2017/05/22/冒泡排序/index.html">
+<meta property="og:title" content="Swift5简介和基础语法一">
+<meta property="og:url" content="http://zhulele90.cn/2019/07/11/Swift5简介和基础语法一/index.html">
 <meta property="og:site_name" content="Craco的博客">
-<meta property="og:description" content="三种冒泡排序的方法">
-<meta property="og:updated_time" content="2017-05-22T02:47:06.000Z">
+<meta property="og:description" content="Swift简介 Swift是Apple在2014年6月WWDC发布的全新编程语言，中文名和logo是“雨燕” Swift之父Chris Lattner  Clang编译器作者、LLVM项目的主要发起人 从Apple离职后，先后跳槽到Tesla、Google 目前在Google Brain从事AI研究">
+<meta property="og:updated_time" content="2019-07-11T08:07:29.031Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="冒泡排序">
-<meta name="twitter:description" content="三种冒泡排序的方法">
+<meta name="twitter:title" content="Swift5简介和基础语法一">
+<meta name="twitter:description" content="Swift简介 Swift是Apple在2014年6月WWDC发布的全新编程语言，中文名和logo是“雨燕” Swift之父Chris Lattner  Clang编译器作者、LLVM项目的主要发起人 从Apple离职后，先后跳槽到Tesla、Google 目前在Google Brain从事AI研究">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>冒泡排序 | Craco的博客</title>
+<title>Swift5简介和基础语法一 | Craco的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -261,11 +261,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-冒泡排序" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Swift5简介和基础语法一" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/05/22/冒泡排序/" class="article-date">
-      <time datetime="2017-05-22T02:35:32.000Z" itemprop="datePublished">2017-05-22 10:35:32</time>
+      <a href="/2019/07/11/Swift5简介和基础语法一/" class="article-date">
+      <time datetime="2019-07-11T08:06:45.000Z" itemprop="datePublished">2019-07-11 16:06:45</time>
 </a>
 
 
@@ -280,7 +280,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      冒泡排序
+      Swift5简介和基础语法一
     </h1>
   
 
@@ -291,7 +291,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/冒泡/">冒泡</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swift5-iOS/">Swift5 iOS</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -301,23 +301,84 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>三种冒泡排序的方法</p>
+        <h2 id="Swift简介"><a href="#Swift简介" class="headerlink" title="Swift简介"></a>Swift简介</h2><ul>
+<li>Swift是Apple在2014年6月WWDC发布的全新编程语言，中文名和logo是“雨燕”</li>
+<li>Swift之父Chris Lattner <ul>
+<li>Clang编译器作者、LLVM项目的主要发起人</li>
+<li>从Apple离职后，先后跳槽到Tesla、Google</li>
+<li>目前在Google Brain从事AI研究</li>
+</ul>
+</li>
+</ul>
 <a id="more"></a>
-<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><h3 id="简单版"><a href="#简单版" class="headerlink" title="简单版"></a>简单版</h3><ul>
-<li>需求：冒泡排序。</li>
-<li>理论：1.比较轮数n-1。  2.比较次数n-1。  3.符合某个条件交换位置。</li>
-<li>核心：双重for循环。</li>
-<li>步骤：<br>  1.双重for循环。<br>  2.指定轮数和次数<br>  3.判断是否符合标准。如果符合标准交换位置。</li>
+<h2 id="Swift版本"><a href="#Swift版本" class="headerlink" title="Swift版本"></a>Swift版本</h2><ul>
+<li>Swift5.x版本，ABI稳定<ul>
+<li>API（Application Programming Interface): 应用程序编程接口<ul>
+<li>源代码和库之间的接口 </li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">	<span class="keyword">var</span> arr = [<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="comment">//1.双重for循环。(外循环控制轮数)</span></div><div class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length<span class="number">-1</span>;i++)&#123;</div><div class="line">       <span class="comment">//2.指定轮数和次数（内循环控制次数）</span></div><div class="line">       <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;arr.length<span class="number">-1</span>;j++)&#123;</div><div class="line">           <span class="comment">//3.判断是否符合标准。如果符合标准交换位置。</span></div><div class="line">               <span class="comment">//从小到大排列顺滑，如果前面的比后面的大，那么交换位置。</span></div><div class="line">           <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</div><div class="line">               <span class="keyword">var</span> temp = arr[j];</div><div class="line">               arr[j] = arr[j+<span class="number">1</span>];</div><div class="line">               arr[j+<span class="number">1</span>] = temp;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="built_in">console</span>.log(arr);</div></pre></td></tr></table></figure>
-<h3 id="进阶版"><a href="#进阶版" class="headerlink" title="进阶版"></a>进阶版</h3><ul>
-<li>每轮比较少比较一次。（每一轮都会比较出一个最大值，然后后一轮没有必要再比较了，所以没比较一轮，就少比较一次。。。）</li>
+</li>
+<li>ABI (Application Binary Interface)：应用程序二进制接口<ul>
+<li>应用程序与操作系统之间的底层接口</li>
+<li>涉及的内容有:目标文件格式、数据类型的大小、布局、对齐、函数调用约定等等 </li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> m = <span class="number">0</span>;</div><div class="line">  <span class="keyword">var</span> n = <span class="number">0</span>;</div><div class="line">  <span class="comment">//1.双重for循环。(外循环控制轮数)</span></div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length<span class="number">-1</span>;i++)&#123;</div><div class="line">      <span class="comment">//2.指定轮数和次数（内循环控制次数）</span></div><div class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;arr.length<span class="number">-1</span>-i;j++)&#123;</div><div class="line">          <span class="comment">//3.判断是否符合标准。如果符合标准交换位置。</span></div><div class="line">              <span class="comment">//从小到大排列顺滑，如果前面的比后面的大，那么交换位置。</span></div><div class="line">          <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</div><div class="line">              <span class="keyword">var</span> temp = arr[j];</div><div class="line">              arr[j] = arr[j+<span class="number">1</span>];</div><div class="line">              arr[j+<span class="number">1</span>] = temp;</div><div class="line">          &#125;</div><div class="line">          m++;</div><div class="line">      &#125;</div><div class="line">      n++;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">console</span>.log(arr);</div><div class="line">  <span class="built_in">console</span>.log(m);</div><div class="line">  <span class="built_in">console</span>.log(n);</div></pre></td></tr></table></figure>
-<h3 id="高级版"><a href="#高级版" class="headerlink" title="高级版"></a>高级版</h3><ul>
-<li>如果比较完备提前结束比较。（判断，如果本次比较没有移动任何元素，那么说明已经比较完成）</li>
+</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> m = <span class="number">0</span>;</div><div class="line">  <span class="keyword">var</span> n = <span class="number">0</span>;</div><div class="line">  <span class="comment">//1.双重for循环。(外循环控制轮数)</span></div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length<span class="number">-1</span>;i++)&#123;</div><div class="line">      <span class="comment">//开闭原则。（写在第一个for循环里，是为了，每轮比较初始化bool变量变为true。）</span></div><div class="line">      <span class="keyword">var</span> bool = <span class="literal">true</span>;</div><div class="line">      <span class="comment">//2.指定轮数和次数（内循环控制次数）</span></div><div class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;arr.length<span class="number">-1</span>-i;j++)&#123;</div><div class="line">          <span class="comment">//3.判断是否符合标准。如果符合标准交换位置。</span></div><div class="line">              <span class="comment">//从小到大排列顺滑，如果前面的比后面的大，那么交换位置。</span></div><div class="line">          <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</div><div class="line">              <span class="keyword">var</span> temp = arr[j];</div><div class="line">              arr[j] = arr[j+<span class="number">1</span>];</div><div class="line">              arr[j+<span class="number">1</span>] = temp;</div><div class="line">              bool = <span class="literal">false</span>;</div><div class="line">          &#125;</div><div class="line">          m++;</div><div class="line">      &#125;</div><div class="line">      n++;</div><div class="line">      <span class="comment">//bool这个变量默认值为true;如果本轮比较有一对元素相互交换位置，那么也不能跳出循环。</span></div><div class="line">      <span class="comment">//但是，如果本轮比较没有任何元素相互交换位置，那么说明已经比较完成，可以跳出循环。</span></div><div class="line">      <span class="keyword">if</span>(bool)&#123;</div><div class="line">          <span class="keyword">break</span>;</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">console</span>.log(arr);</div><div class="line">  <span class="built_in">console</span>.log(m);</div><div class="line">  <span class="built_in">console</span>.log(n);</div></pre></td></tr></table></figure>
+</li>
+<li>随着ABI的稳定，Swift语法基本不会再有太大的改动</li>
+<li>Swift完全开源: <a href="https://github.com/apple/swift" target="_blank" rel="external">htps://github.com/apple/swift</a>,主要采用C++编写</li>
+</ul>
+<h2 id="Swift编译流程"><a href="#Swift编译流程" class="headerlink" title="Swift编译流程"></a>Swift编译流程</h2><p>Swift Code –&gt; Swift AST –&gt; Raw Swift IL –&gt; Canonical Swift IL –&gt; LLVM IR –&gt; Assembly –&gt; Executable</p>
+<h3 id="swiftc"><a href="#swiftc" class="headerlink" title="swiftc"></a>swiftc</h3><ul>
+<li>swiftc存放在Xcode内部<ul>
+<li>Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin</li>
+</ul>
+</li>
+<li>一些操作<ul>
+<li>生成语法树：swiftc -dump-ast main.swift</li>
+<li>生成最简洁的SIL代码：swiftc -emit-sil main.swift</li>
+<li>生成LLVM IR代码： swiftc -emit-ir main.swift -o main.ll</li>
+<li>生成汇编代码： swiftc -emit-assembly main.swift -o main.s</li>
+</ul>
+</li>
+<li>对汇编代码进行分析，可以真正掌握编程语言的本质</li>
+</ul>
+<h2 id="Playground-View"><a href="#Playground-View" class="headerlink" title="Playground - View"></a>Playground - View</h2> <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> UIKit</div><div class="line"><span class="keyword">import</span> PlaygroundSupport</div><div class="line"></div><div class="line"><span class="keyword">let</span> view = <span class="type">UIView</span>()</div><div class="line">view.frame = <span class="type">CGRect</span>(x: <span class="number">0</span>, y: <span class="number">0</span>, width: <span class="number">100</span>, height: <span class="number">100</span>)</div><div class="line">view.backgroundColor = <span class="type">UIColor</span>.blue</div><div class="line"><span class="type">PlaygroundPage</span>.current.liveView = view</div></pre></td></tr></table></figure>
+<h2 id="Playground-注释"><a href="#Playground-注释" class="headerlink" title="Playground - 注释"></a>Playground - 注释</h2><ul>
+<li>单行注释 //</li>
+<li>多行注释 /<em> </em>/</li>
+<li>多行嵌套注释 /<em> 1 /</em> 3 <em>/ 2 </em>/</li>
+<li>支持markup语法 添加冒号 //: 等</li>
+</ul>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ul>
+<li>只能赋值一次</li>
+<li>它的值不要求在编译时期确定，但使用之前必须赋值一次</li>
+<li>变量、常量在初始化之前，都不能使用</li>
+</ul>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><ul>
+<li>标识符(比如常量名、变量名、函数名)几乎可以使用任何字符</li>
+<li>标识符不能以数字开头，不能包含空白字符、制表符、箭头灯特殊字符</li>
+</ul>
+<h2 id="常见数据类型"><a href="#常见数据类型" class="headerlink" title="常见数据类型"></a>常见数据类型</h2><ul>
+<li>值类型 (value type)<ul>
+<li>枚举(enum): Optional</li>
+<li>结构体(struct): Bool、Int、Float、Double、Character、String、Array、Dictionary、Set</li>
+</ul>
+</li>
+<li>引用类型 (reference type)<ul>
+<li>类(class)</li>
+</ul>
+</li>
+</ul>
+<h2 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h2><ul>
+<li>布尔类型 <code>let bool = true</code></li>
+<li>字符串 <code>let string = &quot;Hello word!&quot;</code></li>
+<li>字符（可储存ASCII字符、Unicode字符）<code>let character: Character = &quot;A&quot;</code></li>
+<li>浮点数 <code>let double = 12.0</code></li>
+<li>数组 <code>let array = [1, 3, 3, 4]</code></li>
+<li>字典 <code>let dictionary = [&quot;age&quot;: 19, &quot;height&quot;: 123]</code></li>
+</ul>
+<h2 id="元祖-tuple"><a href="#元祖-tuple" class="headerlink" title="元祖(tuple)"></a>元祖(tuple)</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> http404Error = (<span class="number">404</span>, <span class="string">"Not Found"</span>)</div><div class="line"><span class="built_in">print</span>(<span class="string">"The status code is <span class="subst">\(http404Error.<span class="number">0</span>)</span>"</span>)</div><div class="line"></div><div class="line"><span class="keyword">let</span> (statusCode, statusMessage) = http404Error</div><div class="line"><span class="built_in">print</span>(<span class="string">"The status code is <span class="subst">\(statusCode)</span>"</span>)</div><div class="line"></div><div class="line"><span class="keyword">let</span> (justTheStatusCode, <span class="number">_</span>) = http404Error</div><div class="line"></div><div class="line"><span class="keyword">let</span> http200Status = (statusCode: <span class="number">200</span>, description: <span class="string">"OK"</span>)</div><div class="line"><span class="built_in">print</span>(<span class="string">"The status code is <span class="subst">\(http200Status.description)</span>"</span>)</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -325,13 +386,13 @@
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/2017/05/22/冒泡排序/">冒泡排序</a></p>
+        <p><span>本文標題:</span><a href="/2019/07/11/Swift5简介和基础语法一/">Swift5简介和基础语法一</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">Craco</a></p>
-        <p><span>發布時間:</span>2017-05-22, 10:35:32</p>
-        <p><span>最後更新:</span>2017-05-22, 10:47:06</p>
+        <p><span>發布時間:</span>2019-07-11, 16:06:45</p>
+        <p><span>最後更新:</span>2019-07-11, 16:07:29</p>
         <p>
-            <span>原始鏈接:</span><a class="post-url" href="/2017/05/22/冒泡排序/" title="冒泡排序">http://zhulele90.cn/2017/05/22/冒泡排序/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhulele90.cn/2017/05/22/冒泡排序/　　作者: Craco" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <span>原始鏈接:</span><a class="post-url" href="/2019/07/11/Swift5简介和基础语法一/" title="Swift5简介和基础语法一">http://zhulele90.cn/2019/07/11/Swift5简介和基础语法一/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhulele90.cn/2019/07/11/Swift5简介和基础语法一/　　作者: Craco" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -344,15 +405,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/05/24/DOM第一讲/">
-                    DOM第一讲
+                <a href="/2019/07/11/Swift5基本语法二-流程控制、函数/">
+                    Swift5基本语法二--流程控制、函数
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/05/16/js第二天/">
-                    js第二天
+                <a href="/2018/06/08/iOS行距调整/">
+                    iOS行距调整
                 </a>
             </div>
         
@@ -364,7 +425,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目錄</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#冒泡排序"><span class="toc-number">1.</span> <span class="toc-text">冒泡排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单版"><span class="toc-number">1.1.</span> <span class="toc-text">简单版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶版"><span class="toc-number">1.2.</span> <span class="toc-text">进阶版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高级版"><span class="toc-number">1.3.</span> <span class="toc-text">高级版</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift简介"><span class="toc-number">1.</span> <span class="toc-text">Swift简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift版本"><span class="toc-number">2.</span> <span class="toc-text">Swift版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift编译流程"><span class="toc-number">3.</span> <span class="toc-text">Swift编译流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#swiftc"><span class="toc-number">3.1.</span> <span class="toc-text">swiftc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Playground-View"><span class="toc-number">4.</span> <span class="toc-text">Playground - View</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Playground-注释"><span class="toc-number">5.</span> <span class="toc-text">Playground - 注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常量"><span class="toc-number">6.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标识符"><span class="toc-number">7.</span> <span class="toc-text">标识符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见数据类型"><span class="toc-number">8.</span> <span class="toc-text">常见数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字面量"><span class="toc-number">9.</span> <span class="toc-text">字面量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元祖-tuple"><span class="toc-number">10.</span> <span class="toc-text">元祖(tuple)</span></a></li></ol>
         
     </div>
     <style>
@@ -400,7 +461,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"冒泡排序　| Craco的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Swift5简介和基础语法一　| Craco的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -420,7 +481,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/05/24/DOM第一讲/" title="上一篇: DOM第一讲">
+            <a href="/2019/07/11/Swift5基本语法二-流程控制、函数/" title="上一篇: Swift5基本语法二--流程控制、函数">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -428,7 +489,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/05/16/js第二天/" title="下一篇: js第二天">
+            <a href="/2018/06/08/iOS行距调整/" title="下一篇: iOS行距调整">
                 <i class="fa fa-angle-right"></i>
             </a>
         
