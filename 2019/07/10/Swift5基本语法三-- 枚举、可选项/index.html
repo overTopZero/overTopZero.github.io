@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Craco" />
+
+
+
+<meta name="description" content="枚举">
+<meta name="keywords" content="swift5 iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift5基本语法三 -- 枚举、可选项">
+<meta property="og:url" content="http://zhulele90.cn/2019/07/10/Swift5基本语法三-- 枚举、可选项/index.html">
+<meta property="og:site_name" content="Craco的博客">
+<meta property="og:description" content="枚举">
+<meta property="og:updated_time" content="2019-07-11T07:56:45.684Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift5基本语法三 -- 枚举、可选项">
+<meta name="twitter:description" content="枚举">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Craco的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.jpeg">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Swift5基本语法三 -- 枚举、可选项 | Craco的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="http://oq0zg621g.bkt.clouddn.com/icon.jpeg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Craco</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">一个热爱编程的程序猿</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/overtop1990@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/1/">1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS、图层/">iOS、图层</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift-iOS/">swift iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift5-iOS/">swift5 iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/冒泡/">冒泡</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Craco</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="http://oq0zg621g.bkt.clouddn.com/icon.jpeg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Craco</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">一个热爱编程的程序猿</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/overtop1990@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-Swift5基本语法三-- 枚举、可选项" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/07/10/Swift5基本语法三-- 枚举、可选项/" class="article-date">
+      <time datetime="2019-07-10T03:14:36.000Z" itemprop="datePublished">2019-07-10 11:14:36</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Swift5基本语法三 -- 枚举、可选项
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift5-iOS/">swift5 iOS</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><a id="more"></a>
+<h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Direction</span> </span>&#123;</div><div class="line">	<span class="keyword">case</span> north, south, east, west</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="关联值-Associated-Values"><a href="#关联值-Associated-Values" class="headerlink" title="关联值(Associated Values)"></a>关联值(Associated Values)</h4><ul>
+<li>将枚举的成员值跟其他类型的关联储存在一起，会非常有用</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Date</span> </span>&#123;</div><div class="line">    <span class="keyword">case</span> digit(year: <span class="type">Int</span>, month: <span class="type">Int</span>, day: <span class="type">Int</span>)</div><div class="line">    <span class="keyword">case</span> string(<span class="type">String</span>)</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> date = <span class="type">Date</span>.digit(year: <span class="number">2011</span>, month: <span class="number">9</span>, day: <span class="number">11</span>)</div><div class="line">date = .string(<span class="string">"2019-10-9"</span>)</div><div class="line"><span class="keyword">switch</span> date &#123;</div><div class="line"><span class="keyword">case</span> .digit(<span class="keyword">let</span> year, <span class="keyword">let</span> month, <span class="keyword">let</span> day):</div><div class="line">    <span class="built_in">print</span>(year,month,day)</div><div class="line"><span class="keyword">case</span> <span class="keyword">let</span> .string(value):</div><div class="line">    <span class="built_in">print</span>(value)</div><div class="line">&#125;</div><div class="line"><span class="comment">// let 也可以改为 var</span></div><div class="line">~~~ </div><div class="line"></div><div class="line">#### 原始值(<span class="type">Raw</span> <span class="type">Value</span>)</div><div class="line">- 枚举成员可以使用 相同累心 的默认值预先关联，这个默认值就叫做: 原始值 ` <span class="class"><span class="keyword">enum</span> <span class="title">PokerSuit</span>: <span class="title">Character</span> </span>&#123; <span class="keyword">case</span> spade = <span class="string">"A"</span> &#125;`</div><div class="line"></div><div class="line">#### 隐式原始值(<span class="type">Implicitly</span> <span class="type">Assigned</span> <span class="type">Raw</span> <span class="type">Values</span>) </div><div class="line">- 如果枚举的原始值类型是<span class="type">Int</span>、<span class="type">String</span>,<span class="type">Swift</span>会自动分配原始值</div><div class="line">	- 如果是字符串，就是名字</div><div class="line">	- 如果是<span class="type">Int</span>，就是<span class="number">0</span>、<span class="number">1</span>、<span class="number">2</span></div><div class="line"></div><div class="line">~~~swift</div><div class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Direction</span> : <span class="title">String</span> </span>&#123;</div><div class="line">	<span class="keyword">case</span> north = <span class="string">"north"</span></div><div class="line">	<span class="keyword">case</span> south = <span class="string">"south"</span></div><div class="line">	<span class="keyword">case</span> east = <span class="string">"east"</span></div><div class="line">	<span class="keyword">case</span> west = <span class="string">"west"</span></div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Direction</span> : <span class="title">String</span> </span>&#123;</div><div class="line">	<span class="keyword">case</span> north, south, east, west</div><div class="line">&#125;</div><div class="line"><span class="comment">// 这两个枚举写法完全等价</span></div></pre></td></tr></table></figure>
+<h4 id="递归枚举-Recursive-Enumeration"><a href="#递归枚举-Recursive-Enumeration" class="headerlink" title="递归枚举(Recursive Enumeration)"></a>递归枚举(Recursive Enumeration)</h4><ul>
+<li>在enum前必须加上indirect关键字 <code>indirect enum AS {}</code></li>
+</ul>
+<h4 id="MemoryLayout"><a href="#MemoryLayout" class="headerlink" title="MemoryLayout"></a>MemoryLayout</h4><ul>
+<li>可以使用MemoryLayout获取数据类型占用的内存大小</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 关联值 - 直接将传入的关联值存储在枚举变量的内存里</span></div><div class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Password</span> </span>&#123;</div><div class="line">    <span class="keyword">case</span> number(<span class="type">Int</span>, <span class="type">Int</span>, <span class="type">Int</span>, <span class="type">Int</span>)</div><div class="line">    <span class="keyword">case</span> other</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> pwd = <span class="type">Password</span>.number(<span class="number">5</span>, <span class="number">6</span>, <span class="number">4</span>, <span class="number">7</span>)</div><div class="line">pwd = .other</div><div class="line"><span class="type">MemoryLayout</span>&lt;<span class="type">Password</span>&gt;.size <span class="comment">//33,实际用到的控件大小--32个字节存储number，一个存储other</span></div><div class="line"><span class="type">MemoryLayout</span>&lt;<span class="type">Password</span>&gt;.<span class="built_in">stride</span> <span class="comment">//40,分配占用的空间大小</span></div><div class="line"><span class="type">MemoryLayout</span>&lt;<span class="type">Password</span>&gt;.alignment<span class="comment">//8,对齐参数</span></div><div class="line"><span class="comment">// 原始值 - 和枚举成员绑定的，固定的,并不会将原始值存储到枚举变量内存里</span></div><div class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Direction</span> : <span class="title">Int</span> </span>&#123;</div><div class="line">    <span class="keyword">case</span> north = <span class="number">1</span>, south, east, west</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> d = <span class="type">Direction</span>.north</div><div class="line"><span class="type">MemoryLayout</span>&lt;<span class="type">Direction</span>&gt;.size <span class="comment">//1</span></div><div class="line"><span class="type">MemoryLayout</span>&lt;<span class="type">Direction</span>&gt;.<span class="built_in">stride</span> <span class="comment">//1</span></div><div class="line"><span class="type">MemoryLayout</span>&lt;<span class="type">Direction</span>&gt;.alignment<span class="comment">//1</span></div></pre></td></tr></table></figure>
+<h2 id="可选项-Optional"><a href="#可选项-Optional" class="headerlink" title="可选项(Optional)"></a>可选项(Optional)</h2><ul>
+<li>可选项，一般也称为可选类型，它允许将值设置为nil</li>
+<li>在类型名称后加一个?来定义一个可选项</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age: <span class="type">Int</span>? <span class="comment">//表示的是初始值默认是nil</span></div></pre></td></tr></table></figure>
+<h4 id="强制解包-Forced-Unwrapping"><a href="#强制解包-Forced-Unwrapping" class="headerlink" title="强制解包(Forced Unwrapping)"></a>强制解包(Forced Unwrapping)</h4><ul>
+<li>可选项是对其他类型的一层包装，可以将它理解为一个盒子<ul>
+<li>如果为nil，那么他就是个空盒子</li>
+<li>如果不是nil，那么盒子里转的是被包装类型的数据</li>
+</ul>
+</li>
+<li>如果要从可选项中取出被包装的数据(将盒子里的东西取出来)，需要使用感叹号!进行强制解包</li>
+<li>如果对值为nil的可选项(空盒子)进行强制解包，将会产生运行时错误</li>
+</ul>
+<h4 id="可选项绑定-Optional-Binding"><a href="#可选项绑定-Optional-Binding" class="headerlink" title="可选项绑定(Optional Binding)"></a>可选项绑定(Optional Binding)</h4><ul>
+<li>可以使用可选项绑定来判断可选项是否包含值<ul>
+<li>如果包含就会自动解包，把值赋给一个临时的常量或者变量，并返回true，否则返回false</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="keyword">let</span> number = <span class="type">Int</span>(<span class="string">"123"</span>) &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"<span class="subst">\(number)</span>"</span>)</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"shibai"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>可选项绑定，多个条件要用”,”区别开来</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="keyword">let</span> number = <span class="type">Int</span>(<span class="string">"123"</span>), <span class="keyword">let</span> s = <span class="type">Int</span>(<span class="string">"11"</span>) &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"<span class="subst">\(number)</span>"</span>)</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"shibai"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>while循环中使用可选项绑定</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 遍历数组，将遇到的正数加起来，如果遇到负数或者非数字，停止遍历</span></div><div class="line"><span class="keyword">var</span> strs = [<span class="string">"10"</span>, <span class="string">"20"</span>, <span class="string">"abc"</span>, <span class="string">"-20"</span>, <span class="string">"30"</span>]</div><div class="line"></div><div class="line"><span class="keyword">var</span> index = <span class="number">0</span></div><div class="line"><span class="keyword">var</span> sum = <span class="number">0</span></div><div class="line"><span class="keyword">while</span> <span class="keyword">let</span> num = <span class="type">Int</span>(strs[index]), num &gt; <span class="number">0</span> &#123;</div><div class="line">    sum += num</div><div class="line">    index += <span class="number">1</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">print</span>(sum)</div></pre></td></tr></table></figure>
+<h4 id="空合并运算符-Nil-Coalescing-Operator"><a href="#空合并运算符-Nil-Coalescing-Operator" class="headerlink" title="空合并运算符(Nil-Coalescing Operator)"></a>空合并运算符(Nil-Coalescing Operator)</h4><ul>
+<li>a ?? b<ul>
+<li>a 是可选项</li>
+<li>b 是可选项，也可以不是</li>
+<li>b 和 a 的存储类型必须相同</li>
+<li>如果 a 不为nil，就返回a</li>
+<li>如果a 为nil，就返回b</li>
+<li>如果b 不是可选项， 返回a 时会自动解包</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a: <span class="type">Int</span>? = <span class="number">7</span></div><div class="line"><span class="keyword">let</span> b: <span class="type">Int</span> = <span class="number">2</span></div><div class="line"><span class="keyword">let</span> <span class="built_in">c</span> = a ?? b <span class="comment">// c 是 Int， 1</span></div></pre></td></tr></table></figure>
+<ul>
+<li>a ?? b ?? c 从左往右计算</li>
+<li>?? 和 if let 配合使用 <code>if let c = a ?? b {}</code></li>
+</ul>
+<h4 id="guard语句"><a href="#guard语句" class="headerlink" title="guard语句"></a>guard语句</h4><ul>
+<li>guard 条件 else {     退出当前作用域 – return/break… }<ul>
+<li>当guard语句的条件为false时，就会执行大括号里的代码</li>
+<li>当guard语句的条件为true时，就会跳过guard语句</li>
+<li>guard语句特别适合做提前退出</li>
+</ul>
+</li>
+<li>当使用guard语句进行可选项绑定时，绑定的常量、变量也能在外层作用域中使用</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用 guard else 实现用户登录</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">login</span> <span class="params">(<span class="number">_</span> info: [String : String])</span></span> &#123;</div><div class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> username = info[<span class="string">"usernmae"</span>] <span class="keyword">else</span> &#123;</div><div class="line">        <span class="built_in">print</span>(<span class="string">"请输入用户名"</span>)</div><div class="line">        <span class="keyword">return</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> password = info[<span class="string">"password"</span>] <span class="keyword">else</span> &#123;</div><div class="line">        <span class="built_in">print</span>(<span class="string">"请输入密码"</span>)</div><div class="line">        <span class="keyword">return</span></div><div class="line">    &#125;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"用户名: <span class="subst">\(username)</span>"</span>, <span class="string">"密码: <span class="subst">\(password)</span>"</span>, <span class="string">"登录中..."</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="隐式解包-Implicitly-Unwrapped-Optional"><a href="#隐式解包-Implicitly-Unwrapped-Optional" class="headerlink" title="隐式解包(Implicitly Unwrapped Optional)"></a>隐式解包(Implicitly Unwrapped Optional)</h4><ul>
+<li>在某些情况下，可选项一旦被设定值之后，就会一直拥有值，在这种情况下，可以去掉检查，也不必每次访问的时候都进行解包，因为它能确定每次访问的时候都有值</li>
+<li>可以在类型后面加个感叹号!,定义一个隐式解包的可选项</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 隐式解包的可选项</span></div><div class="line"><span class="keyword">let</span> num1: <span class="type">Int</span>! = <span class="number">10</span></div><div class="line"><span class="keyword">let</span> num2: <span class="type">Int</span> = num1</div></pre></td></tr></table></figure>
+<h4 id="字符串插值"><a href="#字符串插值" class="headerlink" title="字符串插值"></a>字符串插值</h4><ul>
+<li><p>可选项在字符串插值或者直接打印时，编译器会发出警告 <code>var age: Int? = 10; print(&quot;My age is \(age)&quot;)</code></p>
+</li>
+<li><p>三种消除警告的方法</p>
+<ul>
+<li><code>print(&quot;My age is \(age!)&quot;)</code></li>
+<li><code>print(&quot;My age is \(String(describing: age))&quot;)</code></li>
+<li><code>print(&quot;My age is \(age ?? 0)&quot;)</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="多重可选项"><a href="#多重可选项" class="headerlink" title="多重可选项"></a>多重可选项</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1: <span class="type">Int</span>? = <span class="number">10</span></div><div class="line"><span class="keyword">var</span> num2: <span class="type">Int</span>?? = num1</div><div class="line"><span class="keyword">var</span> num3: <span class="type">Int</span>?? = <span class="number">10</span></div><div class="line"><span class="built_in">print</span>(num2 == num3) <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> num1: <span class="type">Int</span>? = <span class="literal">nil</span></div><div class="line"><span class="keyword">var</span> num2: <span class="type">Int</span>?? = num1</div><div class="line"><span class="keyword">var</span> num3: <span class="type">Int</span>?? = <span class="literal">nil</span></div><div class="line"><span class="built_in">print</span>(num2 == num3) <span class="comment">// false</span></div><div class="line"><span class="built_in">print</span>(num1 == num3) <span class="comment">// false</span></div><div class="line">(num2 ?? <span class="number">1</span>) ?? <span class="number">2</span> <span class="comment">// 2</span></div><div class="line">(num3 ?? <span class="number">1</span>) ?? <span class="number">2</span> <span class="comment">// 1</span></div></pre></td></tr></table></figure>
+<ul>
+<li>可以使用lldb指令 frame variable -R 或者 fr v -R 查看区别</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2019/07/10/Swift5基本语法三-- 枚举、可选项/">Swift5基本语法三 -- 枚举、可选项</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Craco</a></p>
+        <p><span>发布时间:</span>2019-07-10, 11:14:36</p>
+        <p><span>最后更新:</span>2019-07-11, 15:56:45</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/07/10/Swift5基本语法三-- 枚举、可选项/" title="Swift5基本语法三 -- 枚举、可选项">http://zhulele90.cn/2019/07/10/Swift5基本语法三-- 枚举、可选项/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhulele90.cn/2019/07/10/Swift5基本语法三-- 枚举、可选项/　　作者: Craco" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/07/08/Swift5基本语法二--流程控制、函数/">
+                    Swift5基本语法二--流程控制、函数
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#枚举"><span class="toc-number">1.</span> <span class="toc-text">枚举</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本用法"><span class="toc-number">1.0.1.</span> <span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关联值-Associated-Values"><span class="toc-number">1.0.2.</span> <span class="toc-text">关联值(Associated Values)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#递归枚举-Recursive-Enumeration"><span class="toc-number">1.0.3.</span> <span class="toc-text">递归枚举(Recursive Enumeration)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MemoryLayout"><span class="toc-number">1.0.4.</span> <span class="toc-text">MemoryLayout</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可选项-Optional"><span class="toc-number">2.</span> <span class="toc-text">可选项(Optional)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#强制解包-Forced-Unwrapping"><span class="toc-number">2.0.1.</span> <span class="toc-text">强制解包(Forced Unwrapping)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#可选项绑定-Optional-Binding"><span class="toc-number">2.0.2.</span> <span class="toc-text">可选项绑定(Optional Binding)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#空合并运算符-Nil-Coalescing-Operator"><span class="toc-number">2.0.3.</span> <span class="toc-text">空合并运算符(Nil-Coalescing Operator)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#guard语句"><span class="toc-number">2.0.4.</span> <span class="toc-text">guard语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#隐式解包-Implicitly-Unwrapped-Optional"><span class="toc-number">2.0.5.</span> <span class="toc-text">隐式解包(Implicitly Unwrapped Optional)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串插值"><span class="toc-number">2.0.6.</span> <span class="toc-text">字符串插值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多重可选项"><span class="toc-number">2.0.7.</span> <span class="toc-text">多重可选项</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Swift5基本语法三 -- 枚举、可选项　| Craco的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/07/08/Swift5基本语法二--流程控制、函数/" title="下一篇: Swift5基本语法二--流程控制、函数">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/07/10/Swift5基本语法三-- 枚举、可选项/">Swift5基本语法三 -- 枚举、可选项</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/08/Swift5基本语法二--流程控制、函数/">Swift5基本语法二--流程控制、函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/06/21/Swift5简介和基础语法一/">Swift5简介和基础语法一</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/08/iOS行距调整/">iOS行距调整</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/08/图层/">图层</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/iOS-Image-Processing-in-iOS/">Image Processing in iOS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/DOM第一讲/">DOM第一讲</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/冒泡排序/">冒泡排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/16/js第二天/">js第二天</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/15/js第一天/">js第一天</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2019 Craco
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
